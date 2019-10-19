@@ -1,0 +1,1 @@
+# hotelhub-wordpress-fetcher
