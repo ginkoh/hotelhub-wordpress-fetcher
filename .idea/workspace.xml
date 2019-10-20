@@ -4,6 +4,7 @@
     <list default="true" id="81a3101e-64a0-4ebe-93b8-45e12467298b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/getters/getPostList.go" beforeDir="false" afterPath="$PROJECT_DIR$/getters/getPostList.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getters/urls.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/http-utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/http-utils.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,5 +60,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/controllers/postsController.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
