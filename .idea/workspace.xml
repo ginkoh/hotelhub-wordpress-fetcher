@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a3101e-64a0-4ebe-93b8-45e12467298b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/postsController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/postsController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hotelhub-wordpress-fetcher.exe" beforeDir="false" afterPath="$PROJECT_DIR$/hotelhub-wordpress-fetcher.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/http-utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/http-utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typedefs/httpResponse.go" beforeDir="false" afterPath="$PROJECT_DIR$/typedefs/httpResponse.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
