@@ -7,6 +7,7 @@ import (
 )
 
 var BaseUrl string = "https://www.hotelflow.com.br/wp-json/wp/v2/"
+var BaseSiteUrl string = "https://www.hotelflow.com.br"
 
 func MakeRouteConfigs(w *http.ResponseWriter) {
 	SetContentType(w)

@@ -34,7 +34,7 @@ func ReturnParsedPostList(w http.ResponseWriter, r *http.Request) {
 	results := utils.MakeAsyncRequests(imagesEndpoints)
 
 	// Iterate over the endpoints.
-	for index := range imagesEndpoints {
+	for _ = range imagesEndpoints {
 		// Create a image type (which has only one field) to hold the featured media link
 		var singleImage typedefs.FeaturedImage
 
@@ -45,8 +45,21 @@ func ReturnParsedPostList(w http.ResponseWriter, r *http.Request) {
 		singleImgErr := json.Unmarshal(result.Response, &singleImage)
 		utils.LogError(singleImgErr)
 
-		// Assign each post image to her post.
-		postsList[index].PostImage = singleImage.Guid.Rendered
+		// Initializes the found image flag.
+		found := false
+
+		// Iterate over the posts list to search for the current post image.
+		for ind, post := range postsList {
+			// Checks if the post id is the same as the image's post id.
+			// While the correct image is not matched, continues the loop.
+			if !found && post.FeaturedMedia == singleImage.ID {
+				// Assign each post image to her post.
+				postsList[ind].PostImage = utils.BaseSiteUrl + singleImage.Guid.Rendered
+
+				// The image was found, no need for new search in the current loop.
+				found = true
+			}
+		}
 	}
 
 	// Send the encoded response to the router.
