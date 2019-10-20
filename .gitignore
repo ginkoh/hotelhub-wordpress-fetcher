@@ -64,3 +64,5 @@ typings/
 .exe
 
 hotelhub-wordpress-fetcher.exe
+
+.idea/workspace.xml
