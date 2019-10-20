@@ -5,6 +5,7 @@ import (
 	typedefs "../typedefs"
 	utils "../utils"
 	"encoding/json"
+	"github.com/gorilla/mux"
 	"net/http"
 	"strconv"
 )
@@ -22,8 +23,6 @@ func ReturnParsedPostList(w http.ResponseWriter, r *http.Request) {
 
 		// Convert the featured media int to string.
 		imageEndpoint := "media/" + strconv.Itoa(post.FeaturedMedia)
-
-		// Get the post featured media.
 		singleImgErr := json.Unmarshal(getters.GetSinglePostImage(w, r, imageEndpoint), &singleImage)
 		utils.LogError(singleImgErr)
 
@@ -33,4 +32,24 @@ func ReturnParsedPostList(w http.ResponseWriter, r *http.Request) {
 
 	// Return the encoded JSON to the router.
 	json.NewEncoder(w).Encode(postsList)
+}
+
+func ReturnSingleParsedPost(w http.ResponseWriter, r *http.Request) {
+	var singlePost typedefs.Posts
+	var singleImage typedefs.FeaturedImage
+
+	params := mux.Vars(r)
+	postId := params["postId"]
+
+	jsonErr := json.Unmarshal(getters.GetSinglePost(w, r, postId), &singlePost)
+	utils.LogError(jsonErr)
+
+	// Convert the featured media int to string.
+	imageEndpoint := "media/" + strconv.Itoa(singlePost.FeaturedMedia)
+	singleImgErr := json.Unmarshal(getters.GetSinglePostImage(w, r, imageEndpoint), &singleImage)
+	utils.LogError(singleImgErr)
+
+	singlePost.PostImage = singleImage.Guid.Rendered
+
+	json.NewEncoder(w).Encode(singlePost)
 }
