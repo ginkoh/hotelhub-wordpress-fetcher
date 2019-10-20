@@ -7,11 +7,7 @@ import (
 )
 
 func GetPostList(w http.ResponseWriter, r *http.Request) []byte {
-	// Set the content type to JSON.
-	utils.SetContentType(&w)
-
-	// Enable CORS on the server.
-	utils.EnableCors(&w)
+	utils.MakeRouteConfigs(&w)
 
 	// Endpoint to fetch the content from.
 	endpoint := baseUrl + "posts"
