@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="81a3101e-64a0-4ebe-93b8-45e12467298b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/postsController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/postsController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getters/getFeaturedMedia.go" beforeDir="false" afterPath="$PROJECT_DIR$/getters/getFeaturedMedia.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/getters/getPostList.go" beforeDir="false" afterPath="$PROJECT_DIR$/getters/getPostList.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getters/urls.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/http-utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/http-utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotelhub-wordpress-fetcher.exe" beforeDir="false" afterPath="$PROJECT_DIR$/hotelhub-wordpress-fetcher.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typedefs/posts.go" beforeDir="false" afterPath="$PROJECT_DIR$/typedefs/posts.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +37,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,16 +64,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/controllers/postsController.go</url>
-          <line>2</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

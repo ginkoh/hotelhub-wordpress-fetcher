@@ -88,10 +88,10 @@ package typedefs
 type Posts struct {
 	Author        int    `json:"author"`
 	Categories    []int  `json:"categories"`
-	Content       struct {
-		Protected bool   `json:"protected"`
-		Rendered  string `json:"rendered"`
-	} `json:"content"`
+	//Content       struct {
+	//	Protected bool   `json:"protected"`
+	//	Rendered  string `json:"rendered"`
+	//} `json:"content"`
 	Date    string `json:"date"`
 	DateGmt string `json:"date_gmt"`
 	Excerpt struct {
@@ -99,6 +99,7 @@ type Posts struct {
 		Rendered  string `json:"rendered"`
 	} `json:"excerpt"`
 	FeaturedMedia int    `json:"featured_media"`
+	PostImage string `json:"post_image"`
 	GUID          struct {
 		Rendered string `json:"rendered"`
 	} `json:"guid"`
