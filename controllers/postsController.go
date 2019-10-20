@@ -8,6 +8,7 @@ import (
 	"github.com/gorilla/mux"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 func ReturnParsedPostList(w http.ResponseWriter, r *http.Request) {
@@ -54,7 +55,12 @@ func ReturnParsedPostList(w http.ResponseWriter, r *http.Request) {
 			// While the correct image is not matched, continues the loop.
 			if !found && post.FeaturedMedia == singleImage.ID {
 				// Assign each post image to her post.
-				postsList[ind].PostImage = utils.BaseSiteUrl + singleImage.Guid.Rendered
+
+				if !strings.HasPrefix(singleImage.Guid.Rendered, "http") {
+					postsList[ind].PostImage = utils.BaseSiteUrl + singleImage.Guid.Rendered
+				} else {
+					postsList[ind].PostImage = singleImage.Guid.Rendered
+				}
 
 				// The image was found, no need for new search in the current loop.
 				found = true
